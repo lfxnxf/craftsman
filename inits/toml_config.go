@@ -220,13 +220,13 @@ func NewCommonClients(c Config, logger log.Logger) (*CommonClients, error) {
 	}
 
 	// new RocketMQ
-	if len(c.GetRocketMQConfig()) > 0 {
-		rocketMQClients, err := rocketmq.NewClient(c.GetServiceName(), c.GetRocketMQConfig(), logger, tracer)
-		if err != nil {
-			return comClients, err
-		}
-		comClients.RocketMQClients = rocketMQClients
-	}
+	//if len(c.GetRocketMQConfig()) > 0 {
+	//	rocketMQClients, err := rocketmq.NewClient(c.GetServiceName(), c.GetRocketMQConfig(), logger, tracer)
+	//	if err != nil {
+	//		return comClients, err
+	//	}
+	//	comClients.RocketMQClients = rocketMQClients
+	//}
 
 	//new http client
 	comClients.HttpClient = httprequest.NewClient(1*time.Second, logger, tracer)
