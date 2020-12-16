@@ -3,12 +3,12 @@ package middleware
 import (
 	"github.com/SkyAPM/go2sky"
 	"github.com/garyburd/redigo/redis"
-	"github.com/tiantianjianbao/craftsman/log"
+	"github.com/lfxnxf/craftsman/log"
 	"io/ioutil"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/tiantianjianbao/craftsman/transport"
+	"github.com/lfxnxf/craftsman/transport"
 )
 
 const (

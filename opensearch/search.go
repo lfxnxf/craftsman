@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/SkyAPM/go2sky"
 	"github.com/SkyAPM/go2sky/reporter/grpc/common"
-	"github.com/tiantianjianbao/craftsman/tracing"
+	"github.com/lfxnxf/craftsman/tracing"
 	"net/http"
 	"strings"
 )

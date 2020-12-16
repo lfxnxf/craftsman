@@ -3,7 +3,7 @@ package opensearch
 import (
 	"github.com/SkyAPM/go2sky"
 	"github.com/denverdino/aliyungo/common"
-	"github.com/tiantianjianbao/craftsman/log"
+	"github.com/lfxnxf/craftsman/log"
 )
 
 const (

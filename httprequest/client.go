@@ -5,7 +5,7 @@ import (
 	"github.com/SkyAPM/go2sky"
 	"github.com/SkyAPM/go2sky/reporter/grpc/common"
 	"github.com/mozillazg/request"
-	"github.com/tiantianjianbao/craftsman/log"
+	"github.com/lfxnxf/craftsman/log"
 	"net/http"
 	"time"
 )

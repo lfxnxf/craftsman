@@ -2,8 +2,8 @@ package inits
 
 import (
 	"errors"
-	"github.com/tiantianjianbao/craftsman/log"
-	"github.com/tiantianjianbao/craftsman/opensearch"
+	"github.com/lfxnxf/craftsman/log"
+	"github.com/lfxnxf/craftsman/opensearch"
 )
 
 type OpenSearchClients struct {

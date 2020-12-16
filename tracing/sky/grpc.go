@@ -9,7 +9,7 @@ import (
 	"github.com/SkyAPM/go2sky/reporter/grpc/common"
 	"github.com/go-kit/kit/log"
 	kitgrpc "github.com/go-kit/kit/transport/grpc"
-	"github.com/tiantianjianbao/craftsman/tracing"
+	"github.com/lfxnxf/craftsman/tracing"
 	"google.golang.org/grpc/metadata"
 	"google.golang.org/grpc/status"
 )

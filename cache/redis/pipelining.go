@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 	"github.com/SkyAPM/go2sky/reporter/grpc/common"
-	"github.com/tiantianjianbao/craftsman/tracing/sky"
+	"github.com/lfxnxf/craftsman/tracing/sky"
 	"sync"
 
 	"github.com/garyburd/redigo/redis"

@@ -5,8 +5,8 @@ import (
 	"time"
 
 	"github.com/SkyAPM/go2sky"
-	"github.com/tiantianjianbao/craftsman/log"
-	"github.com/tiantianjianbao/craftsman/tracing/sky"
+	"github.com/lfxnxf/craftsman/log"
+	"github.com/lfxnxf/craftsman/tracing/sky"
 
 	"github.com/SkyAPM/go2sky/propagation"
 	grpctransport "github.com/go-kit/kit/transport/grpc"

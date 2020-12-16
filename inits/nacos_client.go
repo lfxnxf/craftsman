@@ -8,9 +8,9 @@ import (
 	"github.com/nacos-group/nacos-sdk-go/common/constant"
 	"github.com/nacos-group/nacos-sdk-go/model"
 	"github.com/nacos-group/nacos-sdk-go/vo"
-	"github.com/tiantianjianbao/craftsman/log"
-	"github.com/tiantianjianbao/craftsman/sd"
-	"github.com/tiantianjianbao/craftsman/sd/nacos"
+	"github.com/lfxnxf/craftsman/log"
+	"github.com/lfxnxf/craftsman/sd"
+	"github.com/lfxnxf/craftsman/sd/nacos"
 )
 
 var (

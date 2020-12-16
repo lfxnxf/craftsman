@@ -6,7 +6,7 @@ import (
 	"github.com/SkyAPM/go2sky/propagation"
 	"github.com/SkyAPM/go2sky/reporter/grpc/common"
 	"github.com/gin-gonic/gin"
-	"github.com/tiantianjianbao/craftsman/log"
+	"github.com/lfxnxf/craftsman/log"
 	"strconv"
 	"time"
 )

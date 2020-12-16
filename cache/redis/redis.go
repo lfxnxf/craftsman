@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"github.com/SkyAPM/go2sky"
 	"github.com/SkyAPM/go2sky/reporter/grpc/common"
-	"github.com/tiantianjianbao/craftsman/log"
+	"github.com/lfxnxf/craftsman/log"
 	"math/rand"
 	"os"
 	"strings"

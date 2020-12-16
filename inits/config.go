@@ -1,16 +1,16 @@
 package inits
 
 import (
-	"github.com/tiantianjianbao/craftsman/mq/rocketmq"
-	"github.com/tiantianjianbao/craftsman/opensearch"
+	"github.com/lfxnxf/craftsman/mq/rocketmq"
+	"github.com/lfxnxf/craftsman/opensearch"
 	"time"
 
-	"github.com/tiantianjianbao/craftsman/cache/redis"
-	"github.com/tiantianjianbao/craftsman/db/sql"
-	"github.com/tiantianjianbao/craftsman/log"
-	"github.com/tiantianjianbao/craftsman/sd"
-	"github.com/tiantianjianbao/craftsman/tracing"
-	"github.com/tiantianjianbao/craftsman/transport"
+	"github.com/lfxnxf/craftsman/cache/redis"
+	"github.com/lfxnxf/craftsman/db/sql"
+	"github.com/lfxnxf/craftsman/log"
+	"github.com/lfxnxf/craftsman/sd"
+	"github.com/lfxnxf/craftsman/tracing"
+	"github.com/lfxnxf/craftsman/transport"
 )
 
 type DefaultConfig struct {

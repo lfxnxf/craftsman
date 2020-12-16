@@ -3,8 +3,8 @@ package gin
 import (
 	"github.com/SkyAPM/go2sky"
 	"github.com/gin-gonic/gin"
-	"github.com/tiantianjianbao/craftsman/log"
-	"github.com/tiantianjianbao/craftsman/transport/gin/middleware"
+	"github.com/lfxnxf/craftsman/log"
+	"github.com/lfxnxf/craftsman/transport/gin/middleware"
 )
 
 type Client struct {

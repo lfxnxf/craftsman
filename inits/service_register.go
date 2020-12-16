@@ -5,7 +5,7 @@ import (
 	"net"
 
 	"github.com/nacos-group/nacos-sdk-go/vo"
-	"github.com/tiantianjianbao/craftsman/log"
+	"github.com/lfxnxf/craftsman/log"
 )
 
 func RegisterInstance(log log.Logger, config Config, nc *NacosClient) error {

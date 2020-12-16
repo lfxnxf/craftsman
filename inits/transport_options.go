@@ -6,8 +6,8 @@ import (
 	"github.com/go-kit/kit/transport"
 	grpctransport "github.com/go-kit/kit/transport/grpc"
 	httptransport "github.com/go-kit/kit/transport/http"
-	"github.com/tiantianjianbao/craftsman/log"
-	"github.com/tiantianjianbao/craftsman/tracing/sky"
+	"github.com/lfxnxf/craftsman/log"
+	"github.com/lfxnxf/craftsman/tracing/sky"
 	"net/http"
 )
 

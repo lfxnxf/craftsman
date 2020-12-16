@@ -8,8 +8,8 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/tiantianjianbao/craftsman/tracing"
-	"github.com/tiantianjianbao/craftsman/tracing/sky"
+	"github.com/lfxnxf/craftsman/tracing"
+	"github.com/lfxnxf/craftsman/tracing/sky"
 
 	"github.com/SkyAPM/go2sky/propagation"
 	httptransport "github.com/go-kit/kit/transport/http"

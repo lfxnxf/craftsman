@@ -7,9 +7,9 @@ import (
 	"github.com/SkyAPM/go2sky/propagation"
 	"net/http"
 
-	"github.com/tiantianjianbao/craftsman/log/zap"
-	"github.com/tiantianjianbao/craftsman/tracing"
-	"github.com/tiantianjianbao/craftsman/tracing/sky"
+	"github.com/lfxnxf/craftsman/log/zap"
+	"github.com/lfxnxf/craftsman/tracing"
+	"github.com/lfxnxf/craftsman/tracing/sky"
 
 	"github.com/go-kit/kit/endpoint"
 	httptransport "github.com/go-kit/kit/transport/http"

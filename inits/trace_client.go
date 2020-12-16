@@ -11,8 +11,8 @@ import (
 	"github.com/SkyAPM/go2sky"
 	"github.com/SkyAPM/go2sky/propagation"
 	"github.com/SkyAPM/go2sky/reporter"
-	"github.com/tiantianjianbao/craftsman/log"
-	"github.com/tiantianjianbao/craftsman/tracing"
+	"github.com/lfxnxf/craftsman/log"
+	"github.com/lfxnxf/craftsman/tracing"
 	"google.golang.org/grpc/metadata"
 )
 

@@ -1,8 +1,8 @@
 package inits
 
 import (
-	"github.com/tiantianjianbao/craftsman/db/sql"
-	"github.com/tiantianjianbao/craftsman/log"
+	"github.com/lfxnxf/craftsman/db/sql"
+	"github.com/lfxnxf/craftsman/log"
 )
 
 type SQLClients struct {

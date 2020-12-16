@@ -7,8 +7,8 @@ import (
 	"github.com/SkyAPM/go2sky/reporter/grpc/common"
 	"github.com/apache/rocketmq-client-go/core"
 	"github.com/spf13/cast"
-	"github.com/tiantianjianbao/craftsman/log"
-	"github.com/tiantianjianbao/craftsman/tracing"
+	"github.com/lfxnxf/craftsman/log"
+	"github.com/lfxnxf/craftsman/tracing"
 	"time"
 )
 

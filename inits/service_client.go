@@ -3,8 +3,8 @@ package inits
 import (
 	"sync"
 
-	"github.com/tiantianjianbao/craftsman/log"
-	"github.com/tiantianjianbao/craftsman/transport"
+	"github.com/lfxnxf/craftsman/log"
+	"github.com/lfxnxf/craftsman/transport"
 )
 
 const (

@@ -1,7 +1,7 @@
 package inits
 
 import (
-	toml "github.com/tiantianjianbao/craftsman/config/toml"
+	toml "github.com/lfxnxf/craftsman/config/toml"
 )
 
 type MetaConfig struct {

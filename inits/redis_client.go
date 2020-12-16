@@ -1,8 +1,8 @@
 package inits
 
 import (
-	"github.com/tiantianjianbao/craftsman/cache/redis"
-	"github.com/tiantianjianbao/craftsman/log"
+	"github.com/lfxnxf/craftsman/cache/redis"
+	"github.com/lfxnxf/craftsman/log"
 )
 
 type RedisClients struct {
