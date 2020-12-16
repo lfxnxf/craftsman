@@ -14,6 +14,9 @@ require (
 	github.com/gin-gonic/gin v1.6.3
 	github.com/go-kit/kit v0.10.0
 	github.com/go-sql-driver/mysql v1.5.0
+	github.com/golang/protobuf v1.4.2 // indirect
+	github.com/gomodule/redigo v1.8.3 // indirect
+	github.com/gorilla/mux v1.7.3 // indirect
 	github.com/grpc-ecosystem/go-grpc-middleware v1.2.2
 	github.com/jinzhu/gorm v1.9.16
 	github.com/mozillazg/request v0.8.0
@@ -26,4 +29,5 @@ require (
 	go.uber.org/zap v1.15.0
 	golang.org/x/net v0.0.0-20200625001655-4c5254603344
 	google.golang.org/grpc v1.29.1
+	google.golang.org/protobuf v1.23.0 // indirect
 )
