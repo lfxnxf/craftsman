@@ -6,7 +6,7 @@ import (
 	"errors"
 	"fmt"
 	"github.com/SkyAPM/go2sky/propagation"
-	"github.com/SkyAPM/go2sky/reporter/grpc/common"
+	language_agent "github.com/SkyAPM/go2sky/reporter/grpc/language-agent"
 	"github.com/lfxnxf/craftsman/tracing/sky"
 	"google.golang.org/grpc/status"
 	"strconv"
@@ -143,7 +143,7 @@ func newGRPCClient(ctx context.Context, conn *grpc.ClientConn, endpoint string, 
 				return ctx
 			}
 			span.Tag(tracing.TagGRPCClientStart, "before func")
-			span.SetSpanLayer(common.SpanLayer_RPCFramework)
+			span.SetSpanLayer(language_agent.SpanLayer_RPCFramework)
 			span.SetComponent(0)
 			//span.End()
 			return sky.NewContext(ctx, span)

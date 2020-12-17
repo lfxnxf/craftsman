@@ -3,7 +3,7 @@ package redis
 import (
 	"context"
 	"errors"
-	"github.com/SkyAPM/go2sky/reporter/grpc/common"
+	language_agent "github.com/SkyAPM/go2sky/reporter/grpc/language-agent"
 	"github.com/lfxnxf/craftsman/tracing/sky"
 	"sync"
 
@@ -33,7 +33,7 @@ func (r *Redis) NewPipelining(ctx context.Context) (*Pipelining, error) {
 			return nil
 		})
 		if err == nil {
-			span.SetSpanLayer(common.SpanLayer_Cache)
+			span.SetSpanLayer(language_agent.SpanLayer_Cache)
 			r.ctx = sky.NewContext(ctx, span)
 		}
 	}

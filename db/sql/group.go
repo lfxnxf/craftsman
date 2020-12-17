@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 	"github.com/SkyAPM/go2sky"
-	"github.com/SkyAPM/go2sky/reporter/grpc/common"
+	language_agent "github.com/SkyAPM/go2sky/reporter/grpc/language-agent"
 	"strconv"
 	"sync/atomic"
 	"time"
@@ -32,7 +32,7 @@ func (c *Client) Exec(ctx context.Context, sql string, values ...interface{}) *g
 
 		retDB := c.DB.Exec(sql, values...)
 		span.Tag(go2sky.TagDBType, "Exec")
-		span.SetSpanLayer(common.SpanLayer_Database)
+		span.SetSpanLayer(language_agent.SpanLayer_Database)
 		span.End()
 
 		return retDB

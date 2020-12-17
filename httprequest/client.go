@@ -3,9 +3,9 @@ package httprequest
 import (
 	"context"
 	"github.com/SkyAPM/go2sky"
-	"github.com/SkyAPM/go2sky/reporter/grpc/common"
-	"github.com/mozillazg/request"
+	language_agent "github.com/SkyAPM/go2sky/reporter/grpc/language-agent"
 	"github.com/lfxnxf/craftsman/log"
+	"github.com/mozillazg/request"
 	"net/http"
 	"time"
 )
@@ -60,7 +60,7 @@ func (req *HttpRequest) goTracerAndExec(ctx context.Context, f func() (resp *req
 			span.Tag(go2sky.TagURL, resp.Request.URL.String())
 		}
 
-		span.SetSpanLayer(common.SpanLayer_Http)
+		span.SetSpanLayer(language_agent.SpanLayer_Http)
 		span.End()
 	}
 

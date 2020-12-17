@@ -4,7 +4,7 @@ import (
 	"context"
 	"github.com/SkyAPM/go2sky"
 	"github.com/SkyAPM/go2sky/propagation"
-	"github.com/SkyAPM/go2sky/reporter/grpc/common"
+	language_agent "github.com/SkyAPM/go2sky/reporter/grpc/language-agent"
 	"github.com/gin-gonic/gin"
 	"github.com/lfxnxf/craftsman/log"
 	"strconv"
@@ -35,7 +35,7 @@ func trace(tracer *go2sky.Tracer, logger log.Logger) gin.HandlerFunc {
 		//span.SetComponent(int32(inits.LocalIpInt))
 		span.Tag(go2sky.TagHTTPMethod, c.Request.Method)
 		span.Tag(go2sky.TagURL, c.Request.Host+c.Request.URL.Path)
-		span.SetSpanLayer(common.SpanLayer_Http)
+		span.SetSpanLayer(language_agent.SpanLayer_Http)
 
 		traceId := go2sky.TraceID(ctx)
 		ctx = context.WithValue(ctx, TraceIdKey, traceId)

@@ -2,13 +2,13 @@ package sky
 
 import (
 	"context"
+	language_agent "github.com/SkyAPM/go2sky/reporter/grpc/language-agent"
 	"github.com/lfxnxf/craftsman/tracing"
 	"net/http"
 	"strconv"
 
 	"github.com/SkyAPM/go2sky"
 	"github.com/SkyAPM/go2sky/propagation"
-	"github.com/SkyAPM/go2sky/reporter/grpc/common"
 	"github.com/go-kit/kit/log"
 	kithttp "github.com/go-kit/kit/transport/http"
 )
@@ -41,7 +41,7 @@ func HTTPClientTrace(tracer *go2sky.Tracer, options ...TracerOption) kithttp.Cli
 			span.SetComponent(0)
 			span.Tag(go2sky.TagHTTPMethod, req.Method)
 			span.Tag(go2sky.TagURL, req.Host+req.URL.Path)
-			span.SetSpanLayer(common.SpanLayer_Http)
+			span.SetSpanLayer(language_agent.SpanLayer_Http)
 			span.Tag(tracing.TagHTTPClient, "client before")
 			span.End()
 			//fmt.Println("http.client clientBefore go2sky.TraceID", go2sky.TraceID(ctx))
@@ -111,7 +111,7 @@ func HTTPServerTrace(tracer *go2sky.Tracer, options ...TracerOption) kithttp.Ser
 			span.SetComponent(0)
 			span.Tag(go2sky.TagHTTPMethod, req.Method)
 			span.Tag(go2sky.TagURL, req.Host+req.URL.Path)
-			span.SetSpanLayer(common.SpanLayer_Http)
+			span.SetSpanLayer(language_agent.SpanLayer_Http)
 			span.Tag(tracing.TagHTTPServer, "server before")
 			//span.End()
 			//fmt.Println("http.service serverBefore go2sky.TraceID", go2sky.TraceID(ctx))

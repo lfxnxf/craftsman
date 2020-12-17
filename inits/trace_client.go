@@ -70,7 +70,7 @@ func NewSkyTraceClient(log log.Logger, serviceName string, traceConfig tracing.T
 			continue
 		}
 		// TODO 待优化
-		tracer.WaitUntilRegister()
+		//tracer.WaitUntilRegister()
 		traceClients.SkyTraces = append(traceClients.SkyTraces, tracer)
 	}
 

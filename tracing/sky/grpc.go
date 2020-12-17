@@ -3,10 +3,10 @@ package sky
 import (
 	"context"
 	"github.com/SkyAPM/go2sky/propagation"
+	language_agent "github.com/SkyAPM/go2sky/reporter/grpc/language-agent"
 	"strconv"
 
 	"github.com/SkyAPM/go2sky"
-	"github.com/SkyAPM/go2sky/reporter/grpc/common"
 	"github.com/go-kit/kit/log"
 	kitgrpc "github.com/go-kit/kit/transport/grpc"
 	"github.com/lfxnxf/craftsman/tracing"
@@ -39,7 +39,7 @@ func GRPCClientTrace(tracer *go2sky.Tracer, options ...TracerOption) kitgrpc.Cli
 			defer span.End()
 
 			span.SetComponent(0)
-			span.SetSpanLayer(common.SpanLayer_RPCFramework)
+			span.SetSpanLayer(language_agent.SpanLayer_RPCFramework)
 			span.Tag(tracing.TagGRPCClient, "client before")
 
 			//fmt.Println("grpc-client before go2sky.TraceID", go2sky.TraceID(ctx))
@@ -68,7 +68,7 @@ func GRPCClientTrace(tracer *go2sky.Tracer, options ...TracerOption) kitgrpc.Cli
 			defer span.End()
 
 			span.SetComponent(0)
-			span.SetSpanLayer(common.SpanLayer_RPCFramework)
+			span.SetSpanLayer(language_agent.SpanLayer_RPCFramework)
 			span.Tag(tracing.TagGRPCClient, "client finalizer")
 
 			if status2, ok := status.FromError(err); ok {
@@ -139,7 +139,7 @@ func GRPCServerTrace(tracer *go2sky.Tracer, options ...TracerOption) kitgrpc.Ser
 
 			span.SetComponent(0)
 			span.Tag(tracing.TagGRPCServerStart, "server before")
-			span.SetSpanLayer(common.SpanLayer_RPCFramework)
+			span.SetSpanLayer(language_agent.SpanLayer_RPCFramework)
 			return NewContext(ctx, span)
 		},
 	)

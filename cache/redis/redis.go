@@ -8,7 +8,7 @@ import (
 	"errors"
 	"fmt"
 	"github.com/SkyAPM/go2sky"
-	"github.com/SkyAPM/go2sky/reporter/grpc/common"
+	language_agent "github.com/SkyAPM/go2sky/reporter/grpc/language-agent"
 	"github.com/lfxnxf/craftsman/log"
 	"math/rand"
 	"os"
@@ -826,7 +826,7 @@ func (r *ctxRedis) do(cmd string, f func(interface{}, error) (interface{}, error
 		if err != nil {
 			span.Tag(go2sky.TagStatusCode, err.Error())
 		}
-		span.SetSpanLayer(common.SpanLayer_Cache)
+		span.SetSpanLayer(language_agent.SpanLayer_Cache)
 		span.End()
 
 		return rp, err

@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 	"github.com/SkyAPM/go2sky"
-	"github.com/SkyAPM/go2sky/reporter/grpc/common"
+	language_agent "github.com/SkyAPM/go2sky/reporter/grpc/language-agent"
 	"github.com/lfxnxf/craftsman/tracing"
 	"net/http"
 	"strings"
@@ -41,7 +41,7 @@ func (this *Client) Search(ctx context.Context, args SearchArgs, resp interface{
 	}
 
 	span.Tag(tracing.TagOpenSearchType, args.Index_name)
-	span.SetSpanLayer(common.SpanLayer_Database)
+	span.SetSpanLayer(language_agent.SpanLayer_Database)
 	err = this.InvokeByAnyMethod(http.MethodGet, "", "/search", args, resp)
 	if err != nil {
 		this.logger.ErrorT(ctx, "opensearch error", "err", err.Error(), "args", args)

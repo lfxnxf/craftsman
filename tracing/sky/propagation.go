@@ -56,7 +56,7 @@ func ExtractGRPC(md *metadata.MD) Extractor {
 		_parentSpanIDHeader, _ := strconv.Atoi(parentSpanIDHeader)
 
 		return &go2sky.SegmentContext{
-			TraceID:      traceIDInt64(traceIDHeader),
+			TraceID:      traceIDHeader,
 			SpanID:       int32(_spanIDHeader),
 			ParentSpanID: int32(_parentSpanIDHeader),
 		}, nil
@@ -66,7 +66,7 @@ func ExtractGRPC(md *metadata.MD) Extractor {
 // InjectGRPC will inject a span.Context into gRPC metadata.
 func InjectGRPC(md *metadata.MD) Injector {
 	return func(sc go2sky.SegmentContext) error {
-		setGRPCHeader(md, TraceID, traceIDString(sc.TraceID))
+		setGRPCHeader(md, TraceID, sc.TraceID)
 		setGRPCHeader(md, SpanID, strconv.Itoa(int(sc.SpanID)))
 		setGRPCHeader(md, ParentSpanID, strconv.Itoa(int(sc.ParentSpanID)))
 		return nil
@@ -104,3 +104,13 @@ func traceIDInt64(traceId string) []int64 {
 	}
 	return traceIds
 }
+
+//func traceIDStringByString(traceId string) string {
+//	var traceIds []int64
+//	_traceIds := strings.Split(traceId, ".")
+//	for _, traceId := range _traceIds {
+//		id, _ := strconv.ParseInt(traceId, 10, 64)
+//		traceIds = append(traceIds, id)
+//	}
+//	return traceIds
+//}

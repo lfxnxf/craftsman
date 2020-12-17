@@ -1,0 +1,43 @@
+[server]
+    service_name="seller-service"
+    port = 6301
+    proto="grpc"
+    [server.tcp]
+        idle_timeout = 1000
+        keeplive_interval = 1000
+
+[log]
+    level="debug"
+    rotate="day"
+    logpath = "./logs"
+
+[trace]
+    service_name="trace-service"
+    proto="grpc"
+    endpoints="127.0.0.1:11800"
+    #endpoints="172.17.214.113:11800,172.17.214.114:11800,172.17.214.115:11800"
+    balancetype="random"
+    read_timeout=100
+    retry_times=1
+    endpoints_from="SkyAPM"
+
+
+[service_discovery]
+    service_name="sd-service"
+    proto="http"
+    clusters = "shop"
+    endpoints="127.0.0.1:8848"
+    namespace_id = ""
+    balancetype="random"
+    read_timeout=100
+    retry_times=1
+    endpoints_from="nacos"
+
+#[[server_client]]
+#    service_name="goods-service"
+#    proto="grpc"
+#    endpoints="127.0.0.1:6200"
+#    balancetype="random"
+#    read_timeout=100
+#    retry_times=1
+#    endpoints_from="nacos"
