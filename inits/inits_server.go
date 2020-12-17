@@ -174,7 +174,7 @@ func (s *server) shutdown() (err error) {
 	s.Logger.Info("deregister instance", "deRet", deRet, "err", err)
 
 	//释放rocketmq
-	s.Clients.RocketMQClients.Close()
+	//s.Clients.RocketMQClients.Close()
 
 	return
 }

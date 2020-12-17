@@ -1,7 +1,7 @@
 package inits
 
 import (
-	"github.com/lfxnxf/craftsman/mq/rocketmq"
+	//"github.com/lfxnxf/craftsman/mq/rocketmq"
 	"github.com/lfxnxf/craftsman/opensearch"
 	"time"
 
@@ -30,7 +30,7 @@ type DefaultConfig struct {
 
 	OpenSearch []opensearch.OpenSearchConfig `toml:"opensearch"`
 
-	RocketMQ []rocketmq.RocketMQConfig `toml:"rocketmq"`
+	//RocketMQ []rocketmq.RocketMQConfig `toml:"rocketmq"`
 }
 
 type Config interface {
@@ -65,7 +65,7 @@ type Config interface {
 	GetOpenSearchConfig() []opensearch.OpenSearchConfig
 
 	//RocketMQ
-	GetRocketMQConfig() []rocketmq.RocketMQConfig
+	//GetRocketMQConfig() []rocketmq.RocketMQConfig
 
 	// Service client
 	GetServiceClients() []transport.ServerClient

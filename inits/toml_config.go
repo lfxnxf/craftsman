@@ -3,7 +3,8 @@ package inits
 import (
 	"github.com/SkyAPM/go2sky"
 	"github.com/lfxnxf/craftsman/httprequest"
-	"github.com/lfxnxf/craftsman/mq/rocketmq"
+	//"github.com/lfxnxf/craftsman/mq/rocketmq"
+
 	"github.com/lfxnxf/craftsman/opensearch"
 	"time"
 
@@ -31,7 +32,7 @@ type CommonClients struct {
 	SQLClients        *SQLClients
 	OpenSearchClients *OpenSearchClients
 	HttpClient        *httprequest.Client
-	RocketMQClients   *rocketmq.Client
+	//RocketMQClients   *rocketmq.Client
 }
 
 type ConfigToml struct {
@@ -127,9 +128,9 @@ func (c ConfigToml) GetServiceClients() []transport.ServerClient {
 	return c.defaultConfig.ServerClient
 }
 
-func (c ConfigToml) GetRocketMQConfig() []rocketmq.RocketMQConfig {
-	return c.defaultConfig.RocketMQ
-}
+//func (c ConfigToml) GetRocketMQConfig() []rocketmq.RocketMQConfig {
+//	return c.defaultConfig.RocketMQ
+//}
 
 func GetServiceName() string {
 	return serviceName
