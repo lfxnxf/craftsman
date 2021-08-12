@@ -101,7 +101,7 @@ func openDB(name, address string, isMaster int, statLevel, format string, tracer
 		return nil, fmt.Errorf("open mysql [%s] master %s error %s", name, address, err)
 	}
 	db = db.Debug()
-	//db.SetLogger(newGlobalLogger(statLevel, isMaster, parseDbName(address), format))
+	db.SetLogger(newGlobalLogger(statLevel, isMaster, parseDbName(address), format))
 	db.DB().SetMaxIdleConns(maxIdle)
 	db.DB().SetMaxOpenConns(maxActive)
 	db.DB().SetConnMaxLifetime(time.Duration(lifetime) * time.Second)
